@@ -1,0 +1,303 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Agriculture Friendly</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons-->
+  <link href="{%  static  'img/favicon.jpg'  %}" rel="icon">
+  <link href="{%  static  'img/apple-touch-icon.jpg'  %}" rel="apple-touch-icon">
+  <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+  
+  <!--
+  <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+   Google Fonts
+    -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Roboto:100,300,400,500,700|Philosopher:400,400i,700,700i" rel="stylesheet">
+ 
+  <!-- Vendor CSS Files -->
+  <link href="{%  static 'vendor/aos/aos.css' %}" rel="stylesheet">
+  <link href="{%  static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{%  static 'vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+  <link href="{%  static 'vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet">
+  <link href="{%  static 'vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link rel="stylesheet"  href="{%  static 'css/style.css' %}">
+  <style>
+    body{
+      font-family: 'Arial';
+      /*font-family:'Rubik';*/
+
+      color:black;
+      background-image: linear-gradient(to right, #fff7de,#deebff,#deffe7,#defff3);
+    }
+    #h1{
+      text-color:red;
+    }
+    .button {
+      font-family:san-serif;
+      border-radius: 20px;
+      background-color: #009425;
+      border: none;
+      color: green;
+      text-align: center;
+      font-size: 6px;
+      padding: 6px;
+      width: 200px;
+      transition: all 0.5s;
+      cursor: pointer;
+      margin: 3px;
+      border:2px solid white;
+    }
+    .button:hover{
+      background-color:green;
+      text-color:green;
+      border:2px solid yellow;
+    }
+    .button span {
+      cursor: pointer;
+      display: inline-block;
+      position: relative;
+      transition: 0.5s;
+    }
+    
+    .button span:after {
+      content: '\00bb';
+      position: absolute;
+      opacity: 0;
+      top: 0;
+      right: -20px;
+      transition: 0.5s;
+    }
+    
+    .button:hover span {
+      padding-right: 25px;
+    }
+    
+    .button:hover span:after {
+      opacity: 1;
+      right: 0;
+      
+    }
+    #get-started>#card{
+      color:white;
+      background-color:#003d0f;
+    }
+  </style>
+  
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header style="background-color:#234a3b;" id="header" class="header fixed-top d-flex align-items-center">
+    <div class="container d-flex align-items-center justify-content-between">
+
+      <div id="logo">
+        <h1><a href="{% url 'index' %}" style="color:#ff8400;"><span style="color:#00de04;">AGRICULTURE </span>FRIENDLY</a></h1>
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" title="" /></a>-->
+      </div>
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a style="color:orange;text-decoration:underline;font-size:18px;" class="nav-link scrollto" href="{% url 'index' %}">Home</a></li>
+          <li><a style="color:white;font-size:18px;" class="nav-link scrollto" href="{% url 'analysis' %}">Analysis</a></li>
+          <li><a style="color:white;font-size:18px;" class="nav-link scrollto" href="{% url 'home' %}">Prediction</a></li>
+          <li><a style="color:white;font-size:18px;" class="nav-link scrollto" href="{% url 'stages' %}">Stages</a></li>
+          <li><a style="color:white;font-size:18px;" class="nav-link scrollto" href="{% url 'contact' %}">Contact</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+
+  <!-- ======= Hero Section ======= -->
+  <div><br>
+  <br></div>
+  <section id="hero">
+    <div class="hero-container" data-aos="fade-in">
+      <h1 style="color:green;">Welcome to Agriculture Friendly</h1>
+      <h2 style="font-size:24px;color:grey;font-weight:400">Best Crop prediction for best farmers!</h2>
+      <img style="border-radius:20px;border:2px solid green;box-shadow:0px 0px 15px green"src="{%  static 'img/herobg.jpeg' %}" alt="Hero Imgs" data-aos="zoom-out" data-aos-delay="100">
+      <a href="#get-started" style="color:green" class="btn-get-started scrollto">Special Features</a>
+      <div class="btns">
+        <a style="font-size:24px;" href="{% url 'analysis' %}"><i class="fa fa-apple fa-3x"></i> Crop Accuracy</a>
+        <a style="font-size:24px;" href="{% url 'home' %}"><i class="fa fa-play fa-3x"></i> Crop Prediction</a>
+        <a style="font-size:24px;" href="{% url 'stages' %}"><i class="fa fa-windows fa-3x"></i> Crop Stages</a>
+      </div>
+    </div>
+  </section><!-- End Hero Section -->
+
+  <main id="main">
+    <!-- ======= About Us Section ======= -->
+    <section id="about-us" class="about-us padd-section">
+      <div class="container" data-aos="fade-up">
+        <div class="row justify-content-center">
+
+          <div class="col-md-5 col-lg-4">
+            <img style=" padding-top: 0px;max-width: 100%;height: 100%;border-radius:20px 20px" src="{%  static 'images/crop3bg.jpg' %}" alt="About" data-aos="zoom-in" data-aos-delay="80">
+          </div>
+
+          <div class="col-md-7 col-lg-7">
+            <div class="about-content" data-aos="fade-left" data-aos-delay="80" style="padding-top: 10px;" >
+
+              <h2 style="font-family:Arial;"><span>About Us!</span> </h2>
+                <ul class="list-unstyled" style="font-size:24px;text-transform:none;">
+                <li style="font-size:16px;line-height: 20px;text-transform:none;text-align: justify;font-weight:500"><i style="padding-right: 20px;" class="vi bi-chevron-right"></i>In General, Agriculture is the backbone of India and also plays an important role in the Indian economy. Most Indians have Agriculture as their occupation.</li>
+                <li style="font-size:16px;line-height: 20px;text-transform:none;text-align: justify;font-weight:500"><i style="padding-right: 20px;" class="vi bi-chevron-right"></i>Farmers usually have the mindset of planting the same crop, using more fertilizers, and following the public choice. </li>
+                <li style="font-size:16px;line-height: 20px;text-transform:none;text-align: justify;font-weight:500"><i style="padding-right: 20px;" class="vi bi-chevron-right"></i>But nowadays, food production and prediction are getting depleted due to unnatural climatic changes, which will adversely affect the economy of farmers by getting a poor yield.</li>
+                <li style="font-size:16px;line-height: 20px;text-transform:none;text-align: justify;font-weight:500"><i style="padding-right: 20px;" class="vi bi-chevron-right"></i>Machine Learning is one such advanced technique deployed to predict crop yield in agriculture. By looking at the past few years, It gives us an idea for the finest predicted crop which will be cultivated in the field weather conditions. </li>
+                <li style="font-size:16px;line-height: 20px;text-transform:none;text-align: justify;font-weight:500"><i style="padding-right: 20px;" class="vi bi-chevron-right"></i>Various Machine Learning techniques we are using such as K-Near Neighbor, Decision Tree, Advanced Random Forest classifier and planning to implement Route map with time reminder.</li>
+                <li style="font-size:16px;line-height: 20px;text-transform:none;text-align: justify;font-weight:500"><i style="padding-right: 20px;" class="vi bi-chevron-right"></i>This System will be useful to justify the crop yield prediction Accurately and Efficiently.</li>
+                </ul>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section><!-- End About Us Section -->
+      <!-- ======= Introduction Section ======= -->
+      <section id="about-us" class="about-us padd-section">
+        <div class="container" data-aos="fade-up">
+          <div class="row justify-content-center">
+            <div class="col-md-7 col-lg-7">
+              <div class="about-content" data-aos="fade-left" data-aos-delay="80" style="padding-top: 10px;" >
+  
+                <h2 style="font-family:Arial;"><span>Agriculture Friendly</span> </h2>
+                  <ul class="list-unstyled" style="font-size:24px;text-transform:none;">
+                  <li style="font-size:16px;line-height: 20px;text-transform:none;text-align: justify;font-weight:500"><i style="padding-right: 20px;" class="vi bi-chevron-right"></i>Agriculture is considered as the main and the foremost culture in India, new Innovative technologies and techniques are not getting used properly.</li>
+                  <li style="font-size:16px;line-height: 20px;text-transform:none;text-align: justify;font-weight:500"><i style="padding-right: 20px;" class="vi bi-chevron-right"></i>Crop yield prediction is an important agricultural problem. The Agricultural yield primarily depends on weather conditions (rain, temperature, etc).</li>
+                  <li style="font-size:16px;line-height: 20px;text-transform:none;text-align: justify;font-weight:500"><i style="padding-right: 20px;" class="vi bi-chevron-right"></i>Nowadays, some farmers don’t have awareness about the crop which suits their soils as soil quality.</li>
+                  <li style="font-size:16px;line-height: 20px;text-transform:none;text-align: justify;font-weight:500"><i style="padding-right: 20px;" class="vi bi-chevron-right"></i>Some of the farmers choose the suicides over it for paying off the loan which is not sure the right solution for it.</li>
+                  <li style="font-size:16px;line-height: 20px;text-transform:none;text-align: justify;font-weight:500"><i style="padding-right: 20px;" class="vi bi-chevron-right"></i>This project proposes and implements a system to predict crop yield from previous data more accurately.</li>
+                  </ul>
+              </div>
+              
+            </div>
+            <div class="col-md-5 col-lg-4">
+              <img style=" padding-top: 0px;max-width: 100%;height: 100%;border-radius:20px 20px" src="{%  static 'images/crop2.jpg' %}" alt="About" data-aos="zoom-in" data-aos-delay="80">
+            </div>
+  
+          </div>
+        </div>
+      </section><!-- End Introduction Section -->
+
+    <!-- ======= Get Started Section ======= -->
+    <section id="get-started" class="padd-section text-center">
+
+      <div class="container" data-aos="fade-up">
+        <div class="section-title text-center">
+
+          <h2></h2>
+          <h2 style="font-family:Arial;"><span>Explore the Features </span> </h2>
+          <p class="separator">Accurate and Verified Prediction.</p>
+
+        </div>
+      </div>
+
+      <div class="container" style="text-color:white;">
+        <div class="row">
+
+          <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="100">
+            <div id="card" style="background-color:lightgreen;color:black;border:2px solid green;border-radius:20px;box-shadow:4px 4px black;" class="feature-block">
+
+              <img style="width:110px;height:80px;border:2px solid white;border-radius:10px;" src="{%  static 'img/svg/anime.gif' %}" alt="img">
+              <h4 style="color:black">Algoritm verification and Accuracy Check</h4>
+              <p style="color:black">Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
+              <button class="button"><a style="font-size:20px;" href="{% url 'analysis'%}"><span>Analysis </span></a></button>
+
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="200">
+            <div style="background-color:lightgreen;border:2px solid green;border-radius:20px;box-shadow:4px 4px black;" class="feature-block">
+
+              <img style="width:110px;height:80px;border:2px solid white;border-radius:10px;" src="{%  static 'img/svg/anime2.gif' %}" alt="img">
+              <h4 style="color:black">Crop Prediction using some parameters</h4>
+              <p style="color:black">Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
+              <button class="button"><a style="color:white;font-size:20px;" href="{% url 'home' %}"><span>Predict </span></a></button>
+
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="300">
+            <div style="background-color:lightgreen;border:2px solid green;border-radius:20px;box-shadow:4px 4px black;" class="feature-block">
+
+              <img style="width:110px;height:80px;border:2px solid white;border-radius:10px;" src="{%  static 'img/svg/anime1.gif'%}" alt="img">
+              <h4 style="color:black">Crop Analysis and Guide for yeild</h4>
+              <p style="color:black">Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
+              <button class="button"><a style="color:white;font-size:20px;" href="{% url 'stages' %}"><span>Stages </span></a></button>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </section><!-- End Get Started Section -->
+
+        
+  <!-- ======= Footer ======= -->
+
+ 
+
+
+        
+  <!-- ======= Footer ======= -->
+
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+
+        <div class="col-md-12 col-lg-4">
+          <div class="footer-logo">
+
+            <a class="navbar-brand" href="#">Agriculture Friendly</a>
+            <p>“It feels good at the end of the day to know you made a product that other people are going to enjoy.”</p>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="copyrights">
+      <div class="container">
+        <p>&copy; Copyrights AgricultureFriendly. All rights reserved.</p>
+        <div class="credits">
+          <!--
+          All the links in the footer should remain intact.
+          You can delete the links only if you purchased the pro version.
+          Licensing information: https://bootstrapmade.com/license/
+          Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=eStartup
+        -->
+          Designed by <a href="#">AgricultureFriendly</a>
+        </div>
+      </div>
+    </div>
+
+  </footer><!-- End  Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="{%  static 'vendor/aos/aos.js' %}"></script>
+  <script src="{%  static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{%  static 'vendor/glightbox/js/glightbox.min.js' %}"></script>
+  <script src="{%  static 'vendor/swiper/swiper-bundle.min.js' %}"></script>
+  <script src="{%  static 'vendor/php-email-form/validate.js' %}"></script>
+
+  <!-- Template Main JS File -->
+  <script src="{%  static 'js/main.js' %}"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,381 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Agriculture Friendly</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons-->
+  <link href="{%  static  'img/favicon.jpg'  %}" rel="icon">
+  <link href="{%  static  'img/apple-touch-icon.jpg'  %}" rel="apple-touch-icon">
+  <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+  
+  <!--
+  <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+   Google Fonts
+    -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Roboto:100,300,400,500,700|Philosopher:400,400i,700,700i" rel="stylesheet">
+ 
+  <!-- Vendor CSS Files -->
+  <link href="{%  static 'vendor/aos/aos.css' %}" rel="stylesheet">
+  <link href="{%  static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{%  static 'vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+  <link href="{%  static 'vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet">
+  <link href="{%  static 'vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- Template Main CSS File -->
+  <link rel="stylesheet"  href="{%  static 'css/style.css' %}">
+  <style>
+    body{
+      /*font-family: 'Arial';*/
+      font-family:'Rubik';
+
+      color:black;
+      background-image: linear-gradient(to right, #fff7de,#deebff,#deffe7,#defff3);
+    }
+    #h1{
+      text-color:red;
+    }
+    .button {
+      font-family:san-serif;
+      border-radius: 20px;
+      background-color: #009425;
+      border: none;
+      color: green;
+      text-align: center;
+      font-size: 6px;
+      padding: 6px;
+      width: 200px;
+      transition: all 0.5s;
+      cursor: pointer;
+      margin: 3px;
+      border:2px solid white;
+    }
+    .button:hover{
+      background-color:green;
+      text-color:green;
+      border:2px solid yellow;
+    }
+    .button span {
+      cursor: pointer;
+      display: inline-block;
+      position: relative;
+      transition: 0.5s;
+    }
+    
+    .button span:after {
+      content: '\00bb';
+      position: absolute;
+      opacity: 0;
+      top: 0;
+      right: -20px;
+      transition: 0.5s;
+    }
+    
+    .button:hover span {
+      padding-right: 25px;
+    }
+    
+    .button:hover span:after {
+      opacity: 1;
+      right: 0;
+      
+    }
+    #get-started>#card{
+      color:white;
+      background-color:#003d0f;
+    }
+    .progressbar{
+        border:3px solid green;
+        box-shadow:2px 2px blue;
+        border-radius:20px;
+        margin: 50px auto;
+        marging:5%;
+        padding:2% 0 2% 0;
+        z-index:-1;
+    }
+    .progressbar img{
+        width:120px;
+        margin-bottom: 20px;
+        border-radius:50%;
+    }
+    .progressbar p{
+      font-family:calibri;
+      font-weight:700;
+      font-size:16px;
+    }
+    .uli{
+        text-align: center;
+    }
+    .uli li{
+        display: inline-block;
+        width:160px;
+        position: relative;
+    }
+    .uli li .fa{
+      background-color: #ccc;
+      width:22px;
+      height: 22px;
+      border-radius: 50%;
+      align-items: center;
+      padding:2px;
+      color:white;
+    }
+    .uli li i{
+      width:20px;
+      height:20px;
+      padding:5px;
+    }
+    .uli li .fa::after{
+        content:'';
+        background-color: #ccc;
+        height: 5px;
+        width: 180px;
+        display: block;
+        position:absolute;
+        left:0;
+        top:155px;
+        z-index: -1;
+    }
+    .uli li:nth-child(3) .fa{
+        background-color: #cf3035;
+    }
+    .uli li:nth-child(3) .fa:after{
+        background-color: #cf3035;
+    }
+    .uli li:nth-child(2) .fa{
+        background-color: #cf3035;
+    }
+    .uli li:nth-child(2) .fa:after{
+        background-color: #cf3035;
+    }
+    .uli li:nth-child(1) .fa{
+        background-color: green;
+    }
+    .uli li:nth-child(1) .fa:after{
+        background-color: green;
+    }
+    .uli li:nth-child(4) .fa{
+        background-color: #cf3035;
+    }
+    .uli li:nth-child(4) .fa:after{
+        background-color: #cf3035;
+    }
+    .uli li:nth-child(5) .fa{
+        background-color: #cf3035;
+    }
+    .uli li:nth-child(5) .fa:after{
+        background-color: #cf3035;
+    }
+    .uli li:first-child .fa::after{
+        width:105px;
+        left:80px;
+    }
+    .uli li:last-child .fa::after{
+        width:80px;
+    }
+    .uli li:nth-child(6) .fa{
+      background-color: #cf3035;
+  }
+  .uli li:nth-child(6) .fa:after{
+      background-color: #cf3035;
+  }
+  .uli li:nth-child(7) .fa{
+    background-color: #cf3035;
+  }
+  .uli li:nth-child(7) .fa:after{
+    background-color: #cf3035;
+  }
+    #sec h1{
+      text-align:center;
+    }
+    .tooltipby {
+    }
+    
+    .tooltipby .tooltiptextby {
+      font-family:times;
+      font-weight:500;
+      border-top:1px solid orange;
+      font-size:14px;
+      visibility: hidden;
+      width: 250px;
+      line-height:14px;
+      background-color: #c2ffca;
+      color: #000;
+      text-align: center;
+      border-radius: 6px;
+      padding: 0px 0;
+      top: 90%;
+      left: 8%;
+      margin-left: -60px;
+      position: absolute;
+      z-index: 1;
+    }
+    .tooltipby .tooltiptextby::after {
+      content: " ";
+      position: absolute;
+      bottom: 100%;  /* At the top of the tooltip */
+      left: 50%;
+      margin-left: -5px;
+      border-width: 5px;
+      border-style: solid;
+      border-color: transparent transparent green transparent;
+    }
+    
+    .tooltipby:hover .tooltiptextby {
+      visibility: visible;
+    }
+    .main{
+        padding-top:300px;
+    }
+    #strong{
+        font-size:20px;
+        font-weight:600 !important;
+    }
+  </style>
+  
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header style="background-color:#234a3b;" id="header" class="header fixed-top d-flex align-items-center">
+    <div class="container d-flex align-items-center justify-content-between">
+
+      <div id="logo">
+        <h1><a href="{% url 'index' %}" style="color:#ff8400;"><span style="color:#00de04;">AGRICULTURE </span>FRIENDLY</a></h1>
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" title="" /></a>-->
+      </div>
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a style="color:white;font-size:18px;" class="nav-link scrollto" href="{% url 'index' %}">Home</a></li>
+          <li><a style="color:white;font-size:18px;" class="nav-link scrollto" href="{% url 'analysis' %}">Analysis</a></li>
+          <li><a style="color:white;font-size:18px;" class="nav-link scrollto" href="{% url 'home' %}">Prediction</a></li>
+          <li><a style="color:white;font-size:18px;" class="nav-link scrollto" href="{% url 'stages' %}">Stages</a></li>
+          <li><a style="color:orange;text-decoration:underline;font-size:18px;" class="nav-link scrollto" href="{% url 'contact' %}">Contact</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+
+  <!-- ======= Hero Section ======= -->
+  <div><br>
+  <br></div>
+  
+  
+  <main >
+    <section id="sec" >      <!-- ======= Contact Section ======= -->
+    <section style="background-image: linear-gradient(to right, #fff7de,#deebff,#deffe7,#defff3);" id="contact" class="padd-section">
+        <div class="container" data-aos="fade-up">
+          <div class="section-title text-center">
+            <h2 style="font-family:'Rubik">Contact Us!</h2>
+            <h5 style="font-size:20px;color:green;text-align:center">Django Projects</h5>
+          </div>
+  
+          <div class="row justify-content-center" data-aos="fade-up" data-aos-delay="100">
+            
+            <div class="col-lg-3 col-md-4">
+               
+              <div class="info">
+                <div id="strong">
+                  <i class="bi bi-envelope"></i>
+                  <p style="color:black;font-weight:500"><b>NAME : Vinod Kumar K S</b><br>Email: ksvinodkumar445@gmail.com</p>
+                </div>
+              </div>
+            </div>
+  
+            <div style="margin-left:5px;" class="col-lg-5 col-md-8">
+              <div class="form">
+                <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+                  <div class="form-group" style="margin-left:10px;">
+                    <input style="border-radius:10px" type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
+                  </div>
+                  <div class="form-group mt-3" style="margin-left:10px;">
+                    <input style="border-radius:10px" type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
+                  </div>
+                  <div class="form-group mt-3" style="margin-left:10px;">
+                    <input style="border-radius:10px" type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
+                  </div>
+                  <div class="form-group mt-3" style="margin-left:10px;">
+                    <textarea style="border-radius:10px" class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
+                  </div>
+                  <div class="my-3" style="margin-left:10px;">
+                    <div class="loading">Loading</div>
+                    <div class="error-message"></div>
+                    <div class="sent-message">Your message has been sent. Thank you!</div>
+                  </div>
+                  <div class="text-center"><button style="border-radius:10px" type="submit">Send Message</button></div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section><!-- End Contact Section -->
+  </section>
+</main>
+
+        
+  <!-- ======= Footer ======= -->
+
+ 
+
+
+        
+  <!-- ======= Footer ======= -->
+
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+
+        <div class="col-md-12 col-lg-4">
+          <div class="footer-logo">
+
+            <a class="navbar-brand" href="#">Agriculture Friendly</a>
+            <p>“It feels good at the end of the day to know you made a product that other people are going to enjoy.”</p>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="copyrights">
+      <div class="container">
+        <p>&copy; Copyrights AgricultureFriendly. All rights reserved.</p>
+        <div class="credits">
+          <!--
+          All the links in the footer should remain intact.
+          You can delete the links only if you purchased the pro version.
+          Licensing information: https://bootstrapmade.com/license/
+          Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=eStartup
+        -->
+          Designed by <a href="#">AgricultureFriendly</a>
+        </div>
+      </div>
+    </div>
+
+  </footer><!-- End  Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="{%  static 'vendor/aos/aos.js' %}"></script>
+  <script src="{%  static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{%  static 'vendor/glightbox/js/glightbox.min.js' %}"></script>
+  <script src="{%  static 'vendor/swiper/swiper-bundle.min.js' %}"></script>
+  <script src="{%  static 'vendor/php-email-form/validate.js' %}"></script>
+
+  <!-- Template Main JS File -->
+  <script src="{%  static 'js/main.js' %}"></script>
+
+</body>
+
+</html>

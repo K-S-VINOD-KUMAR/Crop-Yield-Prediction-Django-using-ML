@@ -1,0 +1,199 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Agriculture Friendly</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons-->
+  <link href="{%  static  'img/favicon.jpg'  %}" rel="icon">
+  <link href="{%  static  'img/apple-touch-icon.jpg'  %}" rel="apple-touch-icon">
+
+  <!-- Google Fonts 
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Roboto:100,300,400,500,700|Philosopher:400,400i,700,700i" rel="stylesheet">
+  -->
+  <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+  <!-- Vendor CSS Files -->
+  <link href="{%  static 'vendor/aos/aos.css' %}" rel="stylesheet">
+  <link href="{%  static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{%  static 'vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+  <link href="{%  static 'vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet">
+  <link href="{%  static 'vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link rel="stylesheet"  href="{%  static 'css/style.css' %}">
+  <title>Crop Yeild Prediction</title>
+    
+    <style>
+        body{
+            
+            font-family: 'Rubik';
+            background-image: url("{% static 'images/crop5.jpg' %}");
+            background-size: cover;
+            background-repeat:no-repeat;;
+            background-position: 100%;
+            background-position:fit;
+        }
+        #back{
+            background-color: transparent;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- ======= Header ======= -->
+  <header style="background-color:#234a3b;" id="header" class="header fixed-top d-flex align-items-center">
+    <div class="container d-flex align-items-center justify-content-between">
+
+      <div id="logo">
+        <h1><a href="{% url 'index' %}" style="color:#ff8400; font-family: 'Rubik';"><span style="color:#00de04;">AGRICULTURE </span>FRIENDLY</a></h1>
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" title="" /></a>-->
+      </div>
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a style="color:white;font-size:18px;" class="nav-link scrollto" href="{% url 'index' %}">Home</a></li>
+          <li><a style="color:orange;text-decoration:underline;font-size:18px;" class="nav-link scrollto" href="{% url 'analysis' %}">Analysis</a></li>
+          <li><a style="color:white;font-size:18px;" class="nav-link scrollto" href="{% url 'home' %}">Prediction</a></li>
+          <li><a style="color:white;font-size:18px;" class="nav-link scrollto" href="{% url 'stages' %}">Stages</a></li>
+          <li><a style="color:white;font-size:18px;" class="nav-link scrollto" href="{% url 'contact' %}">Contact</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+  <main id="main" class="mt-2">
+      
+    
+  <section class="padd-section text-center">
+  <div class="">
+    <div id="back" class="card-header mt-2 mb-3 p-0">
+        <h1  class="text-center" style="margin-top:0px;margin-bottom:0px;">Crop Accuracy Analysis</h1>
+      </div>
+    
+    <div style="background-color: black;;border-radius:20%" class="accordion w-50 m-auto"  id="accordionExample">
+        <div class="accordion-item" style="background-color: #e6ffe8;">
+          <h2 class="accordion-header" id="headingOne">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+              <div class="input-group input-group-lg">
+                <span class="input-group-text" style="background-color: white;border:none" id="inputGroup-sizing-lg">
+                  <div style="background-color:#accf00; border:none;" class="spinner-grow spinner-grow-sm text-danger" role="status">
+                  <span class="visually-hidden">Loading...</span>
+              </div>
+                </span>
+                <h3 style="padding-left: 5px;color: #008f11;" aria-describedby="inputGroup-sizing-lg">Random Forest Classifier</h3>
+              </div>
+            </button>
+          </h2>
+          <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              <p style="font-size: 20px;">Accuracy of the Algorithm : <b>94%-96%</b><br>Type : Supervised Machine Learning Algorithm</p>
+              <button class="btn btn-success" type="button">
+                <span style="color:orange" class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span>
+                <a style="color:white;font-size:12px;"  href="{% url 'home' %}">Predict...</a>
+            </button>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item" style="background-color: #e6ffe8;">
+          <h2 class="accordion-header" id="headingTwo">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+              <div class="input-group input-group-lg">
+                <span class="input-group-text" style="background-color: white;border:none" id="inputGroup-sizing-lg">
+                  <div style="background-color:#accf00; border:none;" class="spinner-grow spinner-grow-sm text-danger" role="status">
+                  <span class="visually-hidden">Loading...</span>
+                  </div>
+                </span>
+                <h3 style="padding-left: 5px;color: #008f11;" aria-describedby="inputGroup-sizing-lg">Decision Tree Regressor</h3>
+            </button>
+          </h2>
+          <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              <p style="font-size: 20px;">Accuracy of the Algorithm : <b>89%-91%</b><br>Type : Supervised Machine Learning Algorithm</p>
+              <button class="btn btn-success" type="button">
+                <span style="color:orange" class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span>
+                <a style="color:white;font-size:12px;"  href="{% url 'home' %}">Predict...</a>
+            </button>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item" style="background-color: #e6ffe8;">
+          <h2 class="accordion-header" id="headingThree">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+              <div class="input-group input-group-lg">
+                <span class="input-group-text" style="background-color: white;border:none" id="inputGroup-sizing-sm">
+                  <div style="background-color:#accf00; border:none;" class="spinner-grow spinner-grow-sm text-danger" role="status">
+                  <span class="visually-hidden">Loading...</span>
+              </div>
+                </span>
+                <h3 style="padding-left: 5px;color: #008f11;" aria-describedby="inputGroup-sizing-lg">K-Nearest Neighbors Classifier</h3>
+              </div>
+            </button>
+          </h2>
+          <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              <p style="font-size: 20px;">Accuracy of the Algorithm : <b>84%-86%</b><br>Type : Supervised Machine Learning Algorithm</p>
+              <button class="btn btn-success text-center" type="button">
+                <span style="color:orange" class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span>
+                <a style="color:white;font-size:12px;"  href="{% url 'home' %}">Predict...</a>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--
+    <h1 class="text-center">Best Crop Prediction</h1>
+    <div class="card text-center" id="back">
+        <div class="card-header mt-0 p-0">
+          <h4 class="text-center mt-0">Prediction of Crop</h4>
+        </div>
+    <div id="top" style="align-item:center;border:2px solid white;border-radius:10px;box-shadow:5px 5px 5px 5px grey;" class="card-body m-auto mt-2 mb-5 col-8" id="country--part">
+    -->
+</div>
+</section>
+</main>
+<!-- ======= Footer ======= -->
+<footer class="footer">
+    <div class="container">
+      <div class="row">
+
+        <div class="col-md-12 col-lg-4">
+          <div class="footer-logo">
+
+            <a class="navbar-brand" href="#">Agriculture Friendly</a>
+            <p>“It feels good at the end of the day to know you made a product that other people are going to enjoy.”</p>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="copyrights">
+      <div class="container">
+        <p>&copy; Copyrights AgricultureFriendly. All rights reserved.</p>
+        <div class="credits">
+          <!--
+          All the links in the footer should remain intact.
+          You can delete the links only if you purchased the pro version.
+          Licensing information: https://bootstrapmade.com/license/
+          Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=eStartup
+        -->
+          Designed by <a href="#">AgricultureFriendly</a>
+        </div>
+      </div>
+    </div>
+
+  </footer><!-- End  Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+</body>
+</html>
